@@ -6,13 +6,14 @@
     "start": "ng serve",
     "build": "ng build",
     "build:ssr": "ng build && ng run avada-business:server",
-    "serve:ssr": "node dist/avada-business/server/main.js",
+    "serve:ssr": "node dist/avada-business/server/server.mjs",
     "dev:ssr": "ng run avada-business:serve-ssr",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "^19.2.0",
     "@angular/common": "^19.2.0",
     "@angular/compiler": "^19.2.0",
     "@angular/core": "^19.2.0",

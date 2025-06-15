@@ -1,14 +1,15 @@
+// src/app/app.server.module.ts
+
 import { NgModule } from '@angular/core';
 import { ServerModule } from '@angular/platform-server';
-
-import { AppModule } from './app.module';        // Relative path: same folder
-import { AppComponent } from './app.component';  // Relative path: same folder
+import { AppModule } from './app.module';
+import { AppComponent } from './app.component';
 
 @NgModule({
   imports: [
     AppModule,
-    ServerModule,
+    ServerModule
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppServerModule {}
