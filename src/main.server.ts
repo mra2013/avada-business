@@ -1,17 +1,17 @@
 // src/main.server.ts
-
-import { enableProdMode } from '@angular/core';
-import { renderModule } from '@angular/platform-server';
-import { AppServerModule } from './app/app.server.module';
+import 'zone.js/node';
+import { renderApplication } from '@angular/platform-server';
+import { AppComponent } from './app/app.component';
+import { provideServerRendering } from '@angular/platform-server';
 import { APP_BASE_HREF } from '@angular/common';
 
-enableProdMode();
-
 export function render(url: string, baseHref: string) {
-  return renderModule(AppServerModule, {
-    document: '<!doctype html><app-root></app-root>',
+  return renderApplication(AppComponent, {
+    appId: 'avada-business',
+    document: '<!doctype html><html><body><app-root></app-root></body></html>',
     url,
-    extraProviders: [
+    providers: [
+      provideServerRendering(),
       { provide: APP_BASE_HREF, useValue: baseHref }
     ]
   });

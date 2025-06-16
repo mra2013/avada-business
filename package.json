@@ -5,8 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:ssr": "ng build && ng run avada-business:server",
-    "serve:ssr": "node dist/avada-business/server/server.mjs",
+    "build:ssr": "ng build --configuration production && ng run avada-business:server:production",
+    "serve:ssr": "node dist/avada-business/server/main.js",
     "dev:ssr": "ng run avada-business:serve-ssr",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
